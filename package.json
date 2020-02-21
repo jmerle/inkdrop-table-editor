@@ -1,8 +1,8 @@
 {
-  "name": "hello-world",
+  "name": "table-editor",
   "version": "0.0.0",
-  "description": "Hello World plugin description",
-  "repository": "https://github.com/jmerle/inkdrop-hello-world",
+  "description": "Improved table editor for Inkdrop",
+  "repository": "https://github.com/jmerle/inkdrop-table-editor",
   "license": "MIT",
   "main": "./src/index",
   "scripts": {
