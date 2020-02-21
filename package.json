@@ -1,0 +1,98 @@
+{
+  "name": "hello-world",
+  "version": "0.0.0",
+  "description": "Hello World plugin description",
+  "repository": "https://github.com/jmerle/inkdrop-hello-world",
+  "license": "MIT",
+  "main": "./src/index",
+  "scripts": {
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:eslint": "eslint --format codeframe 'src/**'",
+    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.{less,yml,json}'",
+    "fix": "yarn fix:eslint && yarn fix:prettier",
+    "fix:eslint": "yarn lint:eslint --fix",
+    "fix:prettier": "prettier --write --ignore-path .gitignore '**/*.{less,yml,json}'"
+  },
+  "dependencies": {
+    "core-js": "2.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "1.19.1",
+    "rimraf": "^3.0.2"
+  },
+  "engines": {
+    "inkdrop": "^4.x"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "electron": "6.0.11"
+          }
+        }
+      ],
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier",
+      "prettier/react"
+    ],
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "globals": {
+      "inkdrop": true
+    },
+    "settings": {
+      "react": {
+        "version": "latest"
+      }
+    },
+    "ignorePatterns": [
+      "dist/"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --format codeframe --fix"
+    ],
+    "*.{less,yml,json}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
