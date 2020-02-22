@@ -48,7 +48,7 @@ You can customize the keybindings by opening your `keymap.cson` file and adding 
 
 Most commands are also available through the context menu opened by right-clicking inside the editor and through the application menu (Plugins > Table Editor).
 
-Table formatting and header alignment can be configured in the plugin's settings.
+The formatting style and the header alignment can be configured in the plugin's settings.
 
 ## Changelog
 
