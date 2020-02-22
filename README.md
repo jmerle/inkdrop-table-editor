@@ -42,7 +42,7 @@ The following commands are available (replace <kbd>Ctrl</kbd> with <kbd>Cmd</kbd
 | `table-editor:move-column-left`  | Move the column left          | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Left</kbd>  |
 | `table-editor:move-column-right` | Move the column right         | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Right</kbd> |
 
-You can customize the keybindings by opening your `keymap.cson` file and adding keybindings as described [here](https://docs.inkdrop.app/manual/customizing-keybindings). The `table-editor:format-all` command should be bound to the `.CodeMirror textarea` selector, while all other commands should be bound to the `.CodeMirror.table-editor-active textarea` selector. See [keymaps/table-editor.json](./keymaps/table-editor.json) for this plugin's default keymap file in JSON format.
+You can customize the keybindings by opening your `keymap.cson` file and adding keybindings as described [here](https://docs.inkdrop.app/manual/customizing-keybindings). The `table-editor:format-all` command should be bound to the `.CodeMirror textarea` selector, while all other commands should be bound to the `.CodeMirror.table-editor-active textarea` selector.
 
 Most commands are also available through the context menu opened by right-clicking inside the editor and through the application menu (Plugins > Table Editor).
 

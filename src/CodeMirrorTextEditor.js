@@ -60,8 +60,8 @@ export class CodeMirrorTextEditor {
    * @param {number} row - A row index in the text editor.
    * @returns {boolean} `true` if the table at the row can be editted.
    */
-  acceptsTableEdit(row) {
-    return this.cm.getStateAfter(row).table > 0;
+  acceptsTableEdit() {
+    return true;
   }
 
   /**
@@ -84,7 +84,11 @@ export class CodeMirrorTextEditor {
    * @return {undefined}
    */
   insertLine(row, line) {
-    this.cm.doc.replaceRange('\n' + line, new Pos(row - 1));
+    if (row < this.getLastRow()) {
+      this.cm.doc.replaceRange(line + '\n', new Pos(row, 0));
+    } else {
+      this.cm.doc.replaceRange('\n' + line, new Pos(row));
+    }
   }
 
   /**
