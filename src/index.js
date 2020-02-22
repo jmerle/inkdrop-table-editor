@@ -23,19 +23,11 @@ export function activate() {
   subscriptions.add(
     inkdrop.onEditorUnload(() => {
       editor.dispose();
-      editor = null;
     }),
   );
 }
 
 export function deactivate() {
-  if (subscriptions !== null) {
-    subscriptions.dispose();
-    subscriptions = null;
-  }
-
-  if (editor !== null) {
-    editor.dispose();
-    editor = null;
-  }
+  subscriptions.dispose();
+  editor.dispose();
 }

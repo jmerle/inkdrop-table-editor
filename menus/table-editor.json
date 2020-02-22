@@ -1,0 +1,174 @@
+{
+  "menu": [
+    {
+      "label": "Plugins",
+      "submenu": [
+        {
+          "label": "Table Editor",
+          "submenu": [
+            {
+              "label": "Format all tables",
+              "command": "table-editor:format-all"
+            },
+            {
+              "label": "Format current table",
+              "command": "table-editor:format"
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "label": "Align left",
+              "command": "table-editor:align-left"
+            },
+            {
+              "label": "Align right",
+              "command": "table-editor:align-right"
+            },
+            {
+              "label": "Align center",
+              "command": "table-editor:align-center"
+            },
+            {
+              "label": "Unset alignment",
+              "command": "table-editor:align-none"
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "label": "Select cell",
+              "command": "table-editor:select-cell"
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "label": "Insert row",
+              "command": "table-editor:insert-row"
+            },
+            {
+              "label": "Delete row",
+              "command": "table-editor:delete-row"
+            },
+            {
+              "label": "Move row up",
+              "command": "table-editor:move-row-up"
+            },
+            {
+              "label": "Move row down",
+              "command": "table-editor:move-row-down"
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "label": "Insert column",
+              "command": "table-editor:insert-column"
+            },
+            {
+              "label": "Delete column",
+              "command": "table-editor:delete-column"
+            },
+            {
+              "label": "Move column left",
+              "command": "table-editor:move-column-left"
+            },
+            {
+              "label": "Move column right",
+              "command": "table-editor:move-column-right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "context-menu": {
+    ".CodeMirror": [
+      {
+        "label": "Table Editor",
+        "submenu": [
+          {
+            "label": "Format all tables",
+            "command": "table-editor:format-all"
+          }
+        ]
+      }
+    ],
+    ".CodeMirror.table-editor-active": [
+      {
+        "label": "Table Editor",
+        "submenu": [
+          {
+            "label": "Format current table",
+            "command": "table-editor:format"
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "label": "Align left",
+            "command": "table-editor:align-left"
+          },
+          {
+            "label": "Align right",
+            "command": "table-editor:align-right"
+          },
+          {
+            "label": "Align center",
+            "command": "table-editor:align-center"
+          },
+          {
+            "label": "Unset alignment",
+            "command": "table-editor:align-none"
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "label": "Select cell",
+            "command": "table-editor:select-cell"
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "label": "Insert row",
+            "command": "table-editor:insert-row"
+          },
+          {
+            "label": "Delete row",
+            "command": "table-editor:delete-row"
+          },
+          {
+            "label": "Move row up",
+            "command": "table-editor:move-row-up"
+          },
+          {
+            "label": "Move row down",
+            "command": "table-editor:move-row-down"
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "label": "Insert column",
+            "command": "table-editor:insert-column"
+          },
+          {
+            "label": "Delete column",
+            "command": "table-editor:delete-column"
+          },
+          {
+            "label": "Move column left",
+            "command": "table-editor:move-column-left"
+          },
+          {
+            "label": "Move column right",
+            "command": "table-editor:move-column-right"
+          }
+        ]
+      }
+    ]
+  }
+}

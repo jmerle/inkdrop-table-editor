@@ -1,0 +1,20 @@
+{
+  ".CodeMirror.table-editor-active textarea": {
+    "tab": "table-editor:next-cell",
+    "shift-tab": "table-editor:previous-cell",
+    "enter": "table-editor:next-row",
+    "ctrl-enter": "table-editor:escape",
+    "ctrl-left": "table-editor:move-left",
+    "ctrl-right": "table-editor:move-right",
+    "ctrl-up": "table-editor:move-up",
+    "ctrl-down": "table-editor:move-down",
+    "ctrl-alt-left": "table-editor:align-left",
+    "ctrl-alt-right": "table-editor:align-right",
+    "ctrl-alt-up": "table-editor:align-center",
+    "ctrl-alt-down": "table-editor:align-none",
+    "ctrl-alt-shift-up": "table-editor:move-row-up",
+    "ctrl-alt-shift-down": "table-editor:move-row-down",
+    "ctrl-alt-shift-left": "table-editor:move-column-left",
+    "ctrl-alt-shift-right": "table-editor:move-column-right"
+  }
+}

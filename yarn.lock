@@ -810,6 +810,13 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@susisu/mte-kernel@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@susisu/mte-kernel/-/mte-kernel-2.1.0.tgz#ec4b3a9875ae927c7f06f519323f427c0787534f"
+  integrity sha512-4XgtDqZNoVGy2BKqHBhm972T4uGaOWRK1BNnh97ryL2cm2Z8g7Zq59OwcNUNaNLVoqsCp6Nv61qn4z+gq4DYyw==
+  dependencies:
+    meaw "^4.3.0"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -1987,6 +1994,11 @@ loose-envify@^1.0.0, loose-envify@^1.4.0:
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
+
+meaw@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/meaw/-/meaw-4.3.0.tgz#96d74682bb9492623bd3c5d701ad37ba7a561091"
+  integrity sha512-LqrSSga9IZHJzqAQD0KkGQqeXwqgNsM3X+eHAlf/5h1DqyFdP2Q30Tx8Nx2TCzjoibxmQL/JsUtSGwdpZHvuUg==
 
 merge-stream@^2.0.0:
   version "2.0.0"
