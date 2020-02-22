@@ -4,7 +4,7 @@
 [![Latest release](https://img.shields.io/github/v/release/jmerle/inkdrop-table-editor)](https://my.inkdrop.app/plugins/table-editor)
 [![License](https://img.shields.io/github/license/jmerle/inkdrop-table-editor)](https://github.com/jmerle/inkdrop-table-editor/blob/master/LICENSE)
 
-This plugin greatly improves the default table editing capabilities in Inkdrop.
+This plugin greatly improves table editing in Inkdrop.
 
 ## Install
 
