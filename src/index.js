@@ -9,10 +9,18 @@ let editor = null;
 export function activate() {
   subscriptions = new CompositeDisposable();
 
+  const activeEditor = inkdrop.getActiveEditor();
+  if (activeEditor !== undefined) {
+    editor = new Editor(activeEditor.cm);
+  } else {
+    subscriptions.add(
+      inkdrop.onEditorLoad(e => {
+        editor = new Editor(e.cm);
+      }),
+    );
+  }
+
   subscriptions.add(
-    inkdrop.onEditorLoad(e => {
-      editor = new Editor(e.cm);
-    }),
     inkdrop.onEditorUnload(() => {
       editor.dispose();
       editor = null;
