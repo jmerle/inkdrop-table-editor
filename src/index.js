@@ -6,6 +6,23 @@ import { Editor } from './Editor';
 let subscriptions = null;
 let editor = null;
 
+export const config = {
+  formatType: {
+    title: 'Formatting style',
+    description:
+      "Cell contents are not aligned with each other when 'Weak' is selected.",
+    type: 'string',
+    enum: ['Normal', 'Weak'],
+    default: 'Normal',
+  },
+  headerAlignment: {
+    title: 'Header alignment',
+    type: 'string',
+    enum: ['Inherit from column', 'Left', 'Right', 'Center'],
+    default: 'Inherit from column',
+  },
+};
+
 export function activate() {
   subscriptions = new CompositeDisposable();
 

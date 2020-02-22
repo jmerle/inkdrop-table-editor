@@ -1,6 +1,12 @@
 'use babel';
 
-import { TableEditor, options, Alignment } from '@susisu/mte-kernel';
+import {
+  TableEditor,
+  options,
+  Alignment,
+  FormatType,
+  HeaderAlignment,
+} from '@susisu/mte-kernel';
 import { CodeMirrorTextEditor } from './CodeMirrorTextEditor';
 import { Disposable, CompositeDisposable } from 'event-kit';
 
@@ -152,6 +158,21 @@ export class Editor extends Disposable {
   }
 
   getOptions() {
-    return options({});
+    return options({
+      formatType: this.getConfigItem('formatType', {
+        Normal: FormatType.NORMAL,
+        Weak: FormatType.WEAK,
+      }),
+      headerAlignment: this.getConfigItem('headerAlignment', {
+        'Inherit from column': HeaderAlignment.FOLLOW,
+        Left: HeaderAlignment.LEFT,
+        Right: HeaderAlignment.RIGHT,
+        Center: HeaderAlignment.CENTER,
+      }),
+    });
+  }
+
+  getConfigItem(name, map) {
+    return map[inkdrop.config.get(`${NAMESPACE}.${name}`)];
   }
 }
