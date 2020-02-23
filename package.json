@@ -1,6 +1,6 @@
 {
   "name": "table-editor",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Improved table editor for Inkdrop",
   "repository": "https://github.com/jmerle/inkdrop-table-editor",
   "license": "MIT",
