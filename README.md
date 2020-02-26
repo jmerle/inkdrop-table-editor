@@ -4,7 +4,7 @@
 [![Latest release](https://img.shields.io/github/v/release/jmerle/inkdrop-table-editor)](https://my.inkdrop.app/plugins/table-editor)
 [![License](https://img.shields.io/github/license/jmerle/inkdrop-table-editor)](https://github.com/jmerle/inkdrop-table-editor/blob/master/LICENSE)
 
-![](https://i.imgur.com/nH3d0sj.gif)
+![](./media/demo.gif)
 
 This plugin greatly improves table editing in Inkdrop. It is built using [susisu/mte-kernel](https://github.com/susisu/mte-kernel) which is the text editor independent part of [susisu/atom-markdown-table-editor](https://github.com/susisu/atom-markdown-table-editor) which this plugin is based on. Visit [mte-kernel's demo](https://susisu.github.io/mte-demo/) to play around with the table editing capabilities this plugin adds to Inkdrop.
 
