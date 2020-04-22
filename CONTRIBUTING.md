@@ -20,5 +20,5 @@ To install the plugin locally for development, run `ipm link --dev`. Make sure "
 ## Maintainer Tasks
 
 Some tasks only have to be performed by the maintainer:
-- To update dependencies, run `yarn upgrade-interactive --latest` and select the dependencies to update. Be aware not to touch the `core-js` dependency, it needs to stay locked at `2.x` to prevent problems.
+- To update dependencies, run `yarn upgrade-interactive --latest` and select the dependencies to update.
 - To release a new version, run `ipm publish`. Run `ipm help publish` to see all the supported arguments and options. After releasing the new version, go to the repository's releases on GitHub, create a new release, link it to the newly created tag and write some information about the update.

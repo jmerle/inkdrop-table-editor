@@ -14,21 +14,20 @@
     "fix:prettier": "prettier --write --ignore-path .gitignore '**/*.{less,yml,json}'"
   },
   "dependencies": {
-    "@susisu/mte-kernel": "^2.1.0",
-    "core-js": "2.x"
+    "@susisu/mte-kernel": "^2.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-react": "^7.8.3",
-    "babel-eslint": "^10.0.3",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.18.3",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.7",
-    "prettier": "1.19.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.7",
+    "prettier": "2.0.5",
     "rimraf": "^3.0.2"
   },
   "engines": {
@@ -94,6 +93,7 @@
   },
   "prettier": {
     "singleQuote": true,
-    "trailingComma": "all"
+    "trailingComma": "all",
+    "arrowParens": "avoid"
   }
 }
