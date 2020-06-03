@@ -1,6 +1,6 @@
 # Table Editor plugin for Inkdrop
 
-[![Build Status](https://dev.azure.com/jmerle/inkdrop-table-editor/_apis/build/status/Build?branchName=master)](https://dev.azure.com/jmerle/inkdrop-table-editor/_build/latest?definitionId=21&branchName=master)
+[![Build Status](https://github.com/jmerle/inkdrop-table-editor/workflows/Build/badge.svg)](https://github.com/jmerle/inkdrop-table-editor/actions?query=workflow%3ABuild)
 [![Latest release](https://img.shields.io/github/v/release/jmerle/inkdrop-table-editor)](https://my.inkdrop.app/plugins/table-editor)
 [![License](https://img.shields.io/github/license/jmerle/inkdrop-table-editor)](https://github.com/jmerle/inkdrop-table-editor/blob/master/LICENSE)
 
