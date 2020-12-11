@@ -14,20 +14,20 @@
     "fix:prettier": "prettier --write --ignore-path .gitignore '**/*.{less,yml,json}'"
   },
   "dependencies": {
-    "@susisu/mte-kernel": "^2.1.0"
+    "@susisu/mte-kernel": "^2.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/eslint-parser": "^7.11.5",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
-    "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.6",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.3.0",
-    "prettier": "2.1.1",
+    "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-react": "^7.21.5",
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3",
+    "prettier": "2.2.1",
     "rimraf": "^3.0.2"
   },
   "engines": {
