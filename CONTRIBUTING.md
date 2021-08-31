@@ -7,7 +7,7 @@ Thank you for your interest! Contributions are very welcome.
 This project uses
 - [Yarn](https://yarnpkg.com/) as package manager
 - [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) to check for and automatically fix code style issues
-- [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) to create a pre-commit hook which automatically fixes code style issues in changed files on commit
+- [Husky 4.3.8](https://github.com/typicode/husky/tree/v4.3.8) and [lint-staged](https://github.com/okonet/lint-staged) to create a pre-commit hook which automatically fixes code style issues in changed files on commit
 
 Before doing anything else, clone (or fork and clone) this repository, `cd` into it and run `yarn` to install all dependencies.
 
@@ -20,5 +20,5 @@ To install the plugin locally for development, run `ipm link --dev`. Make sure "
 ## Maintainer Tasks
 
 Some tasks only have to be performed by the maintainer:
-- To update dependencies, run `yarn upgrade-interactive --latest` and select the dependencies to update.
+- To update dependencies, run `yarn upgrade-interactive --latest` and select the dependencies to update. Make sure you don't update Husky as newer versions are not backwards compatible and degrade the user experience.
 - To release a new version, run `ipm publish`. Run `ipm help publish` to see all the supported arguments and options. After releasing the new version, go to the repository's releases on GitHub, create a new release, link it to the newly created tag and write some information about the update.
