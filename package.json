@@ -8,26 +8,26 @@
   "scripts": {
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "eslint --format codeframe 'src/**'",
-    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.{less,yml,json}'",
+    "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.{js,less,yml,json}'",
     "fix": "yarn fix:eslint && yarn fix:prettier",
     "fix:eslint": "yarn lint:eslint --fix",
-    "fix:prettier": "prettier --write --ignore-path .gitignore '**/*.{less,yml,json}'"
+    "fix:prettier": "prettier --write --ignore-path .gitignore '**/*.{js,less,yml,json}'"
   },
   "dependencies": {
     "@susisu/mte-kernel": "^2.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/eslint-parser": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.14.5",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.25.1",
+    "@babel/core": "^7.18.5",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-formatter-codeframe": "^7.32.1",
+    "eslint-plugin-react": "^7.30.0",
     "husky": "4.3.8",
-    "lint-staged": "^11.1.2",
-    "prettier": "2.3.2",
+    "lint-staged": "^13.0.1",
+    "prettier": "2.7.0",
     "rimraf": "^3.0.2"
   },
   "engines": {
@@ -53,8 +53,7 @@
       "prettier"
     ],
     "plugins": [
-      "react",
-      "prettier"
+      "react"
     ],
     "parser": "@babel/eslint-parser",
     "env": {
@@ -72,21 +71,18 @@
     },
     "ignorePatterns": [
       "dist/"
-    ],
-    "rules": {
-      "prettier/prettier": "error"
-    }
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged --concurrent false"
     }
   },
   "lint-staged": {
     "*.js": [
       "eslint --format codeframe --fix"
     ],
-    "*.{less,yml,json}": [
+    "*.{js,less,yml,json}": [
       "prettier --write"
     ]
   },
