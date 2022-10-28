@@ -60,7 +60,27 @@ export class CodeMirrorTextEditor {
    * @param {number} row - A row index in the text editor.
    * @returns {boolean} `true` if the table at the row can be editted.
    */
-  acceptsTableEdit() {
+  acceptsTableEdit(row) {
+    const line = this.cm.doc.getLine(row);
+    if (line !== undefined && line.startsWith('|')) {
+      for (let i = row - 1; i >= 0; i--) {
+        const previousLine = this.cm.doc.getLine(i);
+        if (previousLine !== undefined && previousLine.startsWith('|')) {
+          continue;
+        }
+
+        // The cursor is in an admonition block, so we disable table editing
+        // All content in admonition blocks is prefixed with a pipe
+        // Writing normal text in these blocks becomes a lot harder when this plugin sees its content as a table
+        // See https://github.com/libeanim/inkdrop-admonition and https://github.com/jmerle/inkdrop-table-editor/issues/15
+        if (previousLine !== undefined && previousLine.startsWith('[[')) {
+          return false;
+        } else {
+          break;
+        }
+      }
+    }
+
     return true;
   }
 
