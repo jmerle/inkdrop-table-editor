@@ -27,7 +27,13 @@ export class CodeMirrorTextEditor {
    * @returns {undefined}
    */
   setCursorPosition(pos) {
-    this.cm.doc.setCursor(this.pointToPos(pos));
+    const cmPos = this.pointToPos(pos);
+
+    if (cmPos.line === this.cm.doc.lineCount()) {
+      this.cm.doc.replaceRange('\n', new Pos(this.cm.doc.lastLine()));
+    }
+
+    this.cm.doc.setCursor(cmPos);
   }
 
   /**
