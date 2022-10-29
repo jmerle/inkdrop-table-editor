@@ -1,7 +1,7 @@
 # Table Editor plugin for Inkdrop
 
-[![Build status](https://github.com/jmerle/inkdrop-table-editor/workflows/Build/badge.svg)](https://github.com/jmerle/inkdrop-table-editor/actions/workflows/build.yml)
-[![Latest release](https://inkdrop-plugin-badge.vercel.app/api/version/table-editor?style=flat)](https://my.inkdrop.app/plugins/table-editor)
+[![Build Status](https://github.com/jmerle/inkdrop-table-editor/workflows/Build/badge.svg)](https://github.com/jmerle/inkdrop-table-editor/actions/workflows/build.yml)
+[![Latest Release](https://inkdrop-plugin-badge.vercel.app/api/version/table-editor?style=flat)](https://my.inkdrop.app/plugins/table-editor)
 [![Downloads](https://inkdrop-plugin-badge.vercel.app/api/downloads/table-editor?style=flat)](https://my.inkdrop.app/plugins/table-editor)
 
 ![](./media/demo.gif)
