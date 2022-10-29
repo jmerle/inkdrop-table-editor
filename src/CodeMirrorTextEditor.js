@@ -75,11 +75,11 @@ export class CodeMirrorTextEditor {
           continue;
         }
 
-        // The cursor is in an admonition block, so we disable table editing
-        // All content in admonition blocks is prefixed with a pipe
-        // Writing normal text in these blocks becomes a lot harder when this plugin sees its content as a table
-        // See https://github.com/libeanim/inkdrop-admonition and https://github.com/jmerle/inkdrop-table-editor/issues/15
         if (previousLine !== undefined && previousLine.startsWith('[[')) {
+          // The cursor is in an admonition block, so we disable table editing
+          // All content in admonition blocks is prefixed with a pipe
+          // Writing normal text in these blocks becomes a lot harder when this plugin sees its content as a table
+          // See https://github.com/libeanim/inkdrop-admonition and https://github.com/jmerle/inkdrop-table-editor/issues/15
           return false;
         } else {
           break;
