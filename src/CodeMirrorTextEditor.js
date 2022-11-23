@@ -68,14 +68,20 @@ export class CodeMirrorTextEditor {
    */
   acceptsTableEdit(row) {
     const line = this.cm.doc.getLine(row);
-    if (line !== undefined && line.startsWith('|')) {
+    if (line !== undefined && line.trimStart().startsWith('|')) {
       for (let i = row - 1; i >= 0; i--) {
         const previousLine = this.cm.doc.getLine(i);
-        if (previousLine !== undefined && previousLine.startsWith('|')) {
+        if (
+          previousLine !== undefined &&
+          previousLine.trimStart().startsWith('|')
+        ) {
           continue;
         }
 
-        if (previousLine !== undefined && previousLine.startsWith('[[')) {
+        if (
+          previousLine !== undefined &&
+          previousLine.trimStart().startsWith('[[')
+        ) {
           // The cursor is in an admonition block, so we disable table editing
           // All content in admonition blocks is prefixed with a pipe
           // Writing normal text in these blocks becomes a lot harder when this plugin sees its content as a table
