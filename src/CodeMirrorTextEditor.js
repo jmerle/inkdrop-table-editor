@@ -68,6 +68,32 @@ export class CodeMirrorTextEditor {
    */
   acceptsTableEdit(row) {
     const line = this.cm.doc.getLine(row);
+
+    // Check for code blocks
+    if (line !== undefined && line.trimStart().startsWith('|')) {
+      if (line.startsWith(' '.repeat(4))) {
+        // Indented code block
+        return false;
+      }
+
+      let backtickCount = 0;
+      for (let i = row - 1; i >= 0; i--) {
+        const previousLine = this.cm.doc.getLine(i);
+        if (
+          previousLine !== undefined &&
+          previousLine.trimStart().startsWith('```')
+        ) {
+          backtickCount++;
+        }
+      }
+
+      if (backtickCount % 2 === 1) {
+        // Code block surrounded by backticks
+        return false;
+      }
+    }
+
+    // Check for admonition blocks
     if (line !== undefined && line.trimStart().startsWith('|')) {
       for (let i = row - 1; i >= 0; i--) {
         const previousLine = this.cm.doc.getLine(i);
